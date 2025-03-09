@@ -1,0 +1,27 @@
+.product {
+  &__filter {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &-description {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+  }
+
+  &__filter-price,
+  &__filter-milk,
+  &__filter-country {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}

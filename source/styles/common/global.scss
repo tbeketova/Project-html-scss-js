@@ -33,6 +33,18 @@ img {
   flex: 1; // flex-grow: 1; flex-shrink: 0; flex-basis: auto;
 }
 
+.container {
+  margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 110px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

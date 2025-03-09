@@ -1,0 +1,29 @@
+.logo {
+  &__image {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      width: 82px;
+      height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 170px;
+      height: 36px;
+    }
+  }
+
+  &__label {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      width: 126px;
+      color: $text-color;
+    }
+  }
+}

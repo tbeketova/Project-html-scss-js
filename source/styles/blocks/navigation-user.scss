@@ -1,0 +1,62 @@
+.navigation-user {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  width: 180px;
+
+  @media (min-width: $desktop-mini-width) {
+    width: 260px;
+    justify-content: start;
+  }
+
+  &__button {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+
+    @media (min-width: $desktop-mini-width) {
+      width: 120px;
+      gap: 10px;
+      padding: 32px 20px;
+    }
+  }
+
+  &__button span {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.24px;
+    color: $text-color;
+    text-transform: uppercase;
+    display: none;
+
+    @media (min-width: $desktop-mini-width) {
+      display: block;
+    }
+  }
+
+  &__button:hover span,
+  &__button:focus span {
+    color: $accent-color;
+  }
+
+  &__button:active {
+    color: $accent-color;
+    background-color: $bg-light-color;
+  }
+
+  &__button:hover use,
+  &__button:focus use {
+    fill: currentColor;
+  }
+
+  &__button:active svg {
+    fill: currentColor;
+  }
+}

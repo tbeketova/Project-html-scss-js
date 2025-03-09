@@ -1,0 +1,72 @@
+.cards {
+  &__sort {
+    display: flex;
+  }
+
+  &__sort-label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    background-color: $white-color;
+  }
+
+  &__box-price {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+  }
+
+  &__box-title {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 700;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 700;
+    }
+  }
+
+  &__box-description {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__box-button {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 10px 8px 40px;
+    width: 141px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 16px;
+      top: 45%;
+      transform: translateY(-50%);
+      left: 22px;
+      mask-image: url("../../icons/basket-plus.svg");
+      mask-repeat: no-repeat;
+      mask-size: 20px 16px;
+      background-color: $white-color;
+    }
+  }
+}
