@@ -1,5 +1,6 @@
 .slider {
   &__wrapper {
+    background: linear-gradient(to bottom, #f3e8db 0%, #f3e8db 50%, white 100%);
     position: relative;
   }
 
@@ -77,30 +78,44 @@
     list-style-type: none;
     margin: 0 auto;
     padding: 0 0 50px;
-    width: 280px;
+    width: 100%;
+    min-width: 280px;
+    max-width: 1000px;
     border: 2px solid blue;
+
+    @media (min-width: $tablet-width) {
+      padding: 50px 0 0;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 42px;
+      line-height: 64px;
+    }
   }
 
   &__content-box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 280px;
+    max-width: 650px;
+    width: 100%;
     gap: 20px;
+    order: -1;
   }
 
-  /* &__picture-img {
-    width: 280px;
-    height: 280px;
-    margin: 0 auto;
-    border: 2px solid orange;
-  } */
+  &__picture-img {
+    width: 486px;
+    height: 486px;
+  }
 
   &__title {
     font-size: 36px;
@@ -108,9 +123,16 @@
     font-weight: 700;
     letter-spacing: 0.72px;
     margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 56px;
+      line-height: 80px;
+      font-weight: 700;
+    }
   }
 
   &__description {
+    max-width: 450px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -118,6 +140,7 @@
   }
 
   &__price {
+    max-width: 300px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -138,6 +161,10 @@
 
   &__button {
     padding: 8px 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: auto;
+    }
   }
 
   &__pagination {
