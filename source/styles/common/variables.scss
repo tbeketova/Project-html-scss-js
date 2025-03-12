@@ -1,5 +1,5 @@
 /* Fonts */
-$primary-font: "Montserrat-Regular", "Arial", sans-serif;
+$primary-font: "Montserrat", "Arial", sans-serif;
 $secondary-font: "Montserrat-SemiBold", "Arial", sans-serif;
 $bold-font: "Montserrat-Bold", "Arial", sans-serif;
 
@@ -12,17 +12,18 @@ $mobile-width-only: 767px;
 /* Colors */
 $text-color: #333333;
 $accent-color: #7859cf;
+$btn-hover: #9070ec;
+$btn-active: #593cac;
+$btn-disabled:#bdbdbd;
+
 
 $bg-light: #f8f8f8;
 $bg-grey: #bdbdbd;
 $bg-light-color: #f0ebff;
 /* Slider */
-$bg-slider-one: #f3ebe1;
+$bg-slider-white: #f3ebe1;
 $bg-slider-two: #eae6fc;
 $bg-slider-espresso: #e5e6e8;
 
 $white-color: #ffffff;
-
-$bg-color: #9070ec;
-$bg-color-secondary: #593cac;
 $grey: #e2e2e2;

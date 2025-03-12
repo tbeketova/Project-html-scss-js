@@ -2,7 +2,7 @@
   &__wrapper {
     display: grid;
     padding: 50px 0 45px;
-    text-align: center;
+    justify-items: center;
   }
 
   &__title {
@@ -12,6 +12,14 @@
     margin: 0 0 20px;
 
     @media (min-width: $tablet-width) {
+      width: 720px;
+      font-size: 42px;
+      line-height: 64px;
+      margin: 0 0 50px;
+    }
+
+    @media (min-width: $desktop-mini-width) {
+      width: 840px;
       font-size: 42px;
       line-height: 64px;
       margin: 0 0 50px;
@@ -19,7 +27,6 @@
   }
 
   &__label {
-    font-family: $bold-font;
     font-size: 12px;
     line-height: 16px;
     font-weight: 700;
@@ -46,7 +53,7 @@
       width: 750px;
     }
 
-    @media (min-width: $desktop-mini-width) {
+    @media (min-width: $desktop-width) {
       width: 1300px;
       gap: 20px;
     }

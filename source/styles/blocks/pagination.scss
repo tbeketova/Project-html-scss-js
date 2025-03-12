@@ -5,6 +5,10 @@
     padding: 0;
     display: flex;
     gap: 10px;
+
+    @media (min-width: $tablet-width) {
+      gap: 20px;
+    }
   }
 
   &__link {
@@ -25,14 +29,49 @@
     position: relative;
   }
 
+  &__link:hover,
+  &__link:focus {
+    background-color: $btn-hover;
+    color: $white-color;
+  }
+
+  &__link:active {
+    background-color: $btn-active;
+  }
+
+  &__link:disabled {
+    background-color: $btn-disabled;
+  }
+
+  &__link--back,
+  &__link--next {
+    @media (min-width: $tablet-width) {
+      width: 90px;
+    }
+  }
+
   &__link--back::after {
     content: " ";
     position: absolute;
     width: 10px;
     height: 10px;
-    background-image: url("../../icons/arrow-back.svg");
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
+    mask-image: url("../../icons/arrow-back.svg");
+    mask-repeat: no-repeat;
+    mask-size: 10px 10px;
+    background-color: $accent-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__link--back:hover::after {
+    background-color: $white-color;
+  }
+
+  &__link--back:hover,
+  &__link--next:hover {
+    background-color: $btn-hover;
   }
 
   &__link--next::after {
@@ -40,9 +79,32 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    background-image: url("../../icons/arrow-back.svg");
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
+    mask-image: url("../../icons/arrow-back.svg");
+    mask-repeat: no-repeat;
+    mask-size: 10px 10px;
     transform: rotate(180deg);
+    background-color: $accent-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__link--next:hover::after {
+    background-color: $white-color;
+  }
+
+  &__item--current .pagination__link {
+    color: $text-color;
+    background-color: transparent;
+    font-weight: 600;
+  }
+
+  &__link span {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 }

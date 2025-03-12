@@ -1,7 +1,15 @@
 .slider {
+  &__wrapper {
+    display: flex;
+  }
+
   &__wrapper--espresso {
     background-color: $bg-slider-espresso;
     /* background-color: $bg-slider-two; */
+  }
+
+  &__wrapper--white {
+    background-color: $bg-slider-white;
   }
 
   &__button-prev {
@@ -12,6 +20,10 @@
     mask-repeat: no-repeat;
     mask-position: center;
     background-color: $accent-color;
+
+    &__button-prev:hover {
+      border: 2px solid red;
+    }
   }
 
   &__button-next {
