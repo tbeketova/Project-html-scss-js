@@ -1,16 +1,5 @@
 .slider {
-  &__wrapper {
-    background: linear-gradient(to bottom, #f3e8db 0%, #f3e8db 50%, white 100%);
-    position: relative;
-  }
-
-  &__wrapper--espresso {
-    background-color: $bg-slider-espresso;
-  }
-
-  &__wrapper--white {
-    background-color: $bg-slider-white;
-  }
+  position: relative;
 
   &__button-back,
   &__button-next {
@@ -22,9 +11,15 @@
     cursor: pointer;
     background: transparent;
     transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+
+    @media (min-width: $desktop-width) {
+      /* top: 50%;
+      transform: translateY(-50%); */
+    }
   }
 
   &__button-back {
+    width: 30px;
     top: 0;
     left: 0;
     position: absolute;
@@ -32,24 +27,34 @@
     &:hover {
       background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.5) 50%, rgba(120, 89, 207, 0) 100%);
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 11px;
-      height: 20px;
+  &__button-back::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    mask-image: url("../../icons/arrow-back.svg");
+    mask-size: 11px 20px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $accent-color;
+
+    @media (min-width: $tablet-width) {
+      top: 40%;
+    }
+
+    @media (min-width: $desktop-width) {
       top: 50%;
-      left: 50%;
-      transform: translateX(-50%);
-      mask-image: url("../../icons/arrow-back.svg");
-      mask-size: 11px 20px;
-      mask-repeat: no-repeat;
-      mask-position: center;
-      background-color: $accent-color;
+      transform: translateY(-50%);
     }
   }
 
   &__button-next {
+    width: 30px;
     top: 0;
     right: 0;
     position: absolute;
@@ -57,20 +62,29 @@
     &:hover {
       background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.5) 50%, rgba(120, 89, 207, 0) 100%);
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 11px;
-      height: 20px;
+  &__button-next::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    mask-image: url("../../icons/arrow-next.svg");
+    mask-size: 11px 20px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $accent-color;
+
+    @media (min-width: $tablet-width) {
+      top: 40%;
+    }
+
+    @media (min-width: $desktop-width) {
       top: 50%;
-      left: 50%;
-      transform: translateX(-50%);
-      mask-image: url("../../icons/arrow-next.svg");
-      mask-size: 11px 20px;
-      mask-repeat: no-repeat;
-      mask-position: center;
-      background-color: $accent-color;
+      transform: translateY(-50%);
     }
   }
 
@@ -78,13 +92,14 @@
     list-style-type: none;
     margin: 0 auto;
     padding: 0 0 50px;
-    width: 100%;
     min-width: 280px;
-    max-width: 1000px;
-    border: 2px solid blue;
 
     @media (min-width: $tablet-width) {
       padding: 50px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
     }
   }
 
@@ -99,6 +114,12 @@
       font-size: 42px;
       line-height: 64px;
     }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      justify-content: start;
+      gap: 30px;
+    }
   }
 
   &__content-box {
@@ -109,12 +130,34 @@
     max-width: 650px;
     width: 100%;
     gap: 20px;
-    order: -1;
+    order: 1;
+
+    @media (min-width: $tablet-width) {
+      order: -1;
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 1;
+      align-items: start;
+      text-align: left;
+    }
+  }
+
+  &__picture {
+    @media (min-width: $desktop-width) {
+      width: 600px;
+      min-height: 600px;
+      padding-top: 30px;
+    }
   }
 
   &__picture-img {
     width: 486px;
-    height: 486px;
+
+    @media (min-width: $desktop-width) {
+      width: 600px;
+    }
   }
 
   &__title {
@@ -172,7 +215,22 @@
     grid-column: 1 / 4;
 
     @media (min-width: $desktop-width) {
-      display: block;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
     }
+  }
+
+  &__pagination-button {
+    width: 62px;
+    height: 6px;
+    background-color: $white-color;
+    border: none;
+  }
+
+  &__pagination-button--active {
+    background-color: $accent-color;
   }
 }
