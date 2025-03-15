@@ -187,84 +187,86 @@
                 <fieldset class="catalog__filter-group">
                   <legend class="catalog__filter-name">Цена</legend>
                   <div class="catalog__filter-box price-filter">
-                    <div class="range-price-scale">
-                      <div class="range-price-bar">
-                        <button type="button" class="range-button-toggle button-toggle-min">
+                    <div class="price-filter__scale">
+                      <div class="price-filter__bar">
+                        <button type="button" class="price-filter__toggle price-filter__toggle--min">
                           <span class="visually-hidden">Изменить минимальную цену</span>
                         </button>
-                        <button type="button" class="range-button-toggle button-toggle-max">
+                        <button type="button" class="price-filter__toggle price-filter__toggle--max">
                           <span class="visually-hidden">Изменить максимальную цену</span>
                         </button>
                       </div>
                     </div>
-                    <div class="range-price-inputs">
-                          <label class="range-price-label">
-                            <input class="range-price-field" type="number" name="min-price" placeholder="0" value="0" required>
+                    <div class="price-filter__fields">
+                          <label>
+                            <input type="number" name="min-price" placeholder="0" value="0" required>
                           </label>
-                          <label class="range-price-label">
-                            <input class="range-price-field" type="number" name="max-price" placeholder="900" value="900" required>
+                          <label>
+                            <input type="number" name="max-price" placeholder="900" value="900" required>
                           </label>
                     </div>
                   </div>
                 </fieldset>
 
-                <fieldset class="catalog__filter-group filter-radio">
+                <fieldset class="catalog__filter-group">
                   <legend class="catalog__filter-name">Наличие молока</legend>
                   <div class="catalog__filter-box milk-filter">
-                    <div class="catalog__filter-box milk-filter">
-                      <label class="catalog-filter-label">
-                        <input class="control-input visually-hidden" type="radio" id="milk-all" name="milk" value="any" checked>
-                        <span class="control-point"></span>
-                        <span>Неважно</span>
-                      </label>
-                    </div>
-                    <div class="catalog__filter-box milk-filter">
-                      <label class="catalog-filter-label">
-                        <input class="control-input visually-hidden" type="radio" id="milk-animal" name="milk" value="animal">
-                        <span class="control-point"></span>
-                        <span>Только животное</span>
-                      </label>
-                    </div>
-                    <div class="catalog__filter-box milk-filter">
-                      <label class="catalog-filter-label">
-                        <input class="control-input visually-hidden" type="radio" id="milk-plant" name="milk" value="plant">
-                        <span class="control-point"></span>
-                        <span>Только растительное</span>
-                      </label>
-                      <label >
-                        <input class="control-input visually-hidden" type="radio" id="milk-without" name="milk" value="without">
-                        <span class="control-point"></span>
-                        <span>Без молока</span>
-                      </label>
-                    </div>
+                    <label>
+                      <input class="visually-hidden" type="radio" id="milk-all" name="milk" value="any" checked>
+                      <span class="control-point"></span>
+                      <span>Неважно</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden" type="radio" id="milk-animal" name="milk" value="animal">
+                      <span class="control-point"></span>
+                      <span>Только животное</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden" type="radio" id="milk-plant" name="milk" value="plant">
+                      <span class="control-point"></span>
+                      <span>Только растительное</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden" type="radio" id="milk-without" name="milk" value="without">
+                      <span class="control-point"></span>
+                      <span>Без молока</span>
+                    </label>
                   </div>
                 </fieldset>
-                <fieldset class="catalog__filter-group country-filter">
+                <fieldset class="catalog__filter-group">
                   <legend class="catalog__filter-name">Страна произрастания</legend>
-                  <label class="country-filter__label">
-                    <input class="country-filter__input" type="checkbox" name="Brazil" value="Brazil">
-                    <span>Бразилия</span>
-                  </label>
-                  <label class="country-filter__label">
-                    <input class="country-filter__input" type="checkbox" name="Ethiopia" value="Ethiopia">
-                    <span>Эфиопия</span>
-                  </label>
-                  <label class="country-filter__label">
-                    <input class="country-filter__input" type="checkbox" name="Colombia" value="Colombia">
-                    <span>Колумбия</span>
-                  </label>
-                  <label class="country-filter__label">
-                    <input class="country-filter__input" type="checkbox" name="CostaRica" value="CostaRica">
-                    <span>Коста-Рика</span>
-                  </label>
-                  <label class="country-filter__label">
-                    <input class="country-filter__input" type="checkbox" name="Peru" value="Peru">
-                    <span>Перу</span>
-                  </label>
-                  <label class="country-filter__label">
-                    <input class="country-filter__input" type="checkbox" name="Mexico" value="Mexico">
-                    <span>Мексика</span>
-                  </label>
+                  <div class="catalog__filter-box country-filter">
+                    <label>
+                      <input class="country-filter__input" type="checkbox" name="Brazil" value="Brazil">
+                      <span class="custom-checkbox"></span>
+                      <span>Бразилия</span>
+                    </label>
+                    <label>
+                      <input class="country-filter__input" type="checkbox" name="Ethiopia" value="Ethiopia" checked>
+                      <span class="custom-checkbox"></span>
+                      <span>Эфиопия</span>
+                    </label>
+                    <label>
+                      <input class="country-filter__input" type="checkbox" name="Colombia" value="Colombia">
+                      <span class="custom-checkbox"></span>
+                      <span>Колумбия</span>
+                    </label>
+                    <label>
+                      <input class="country-filter__input" type="checkbox" name="CostaRica" value="CostaRica">
+                      <span class="custom-checkbox"></span>
+                      <span>Коста-Рика</span>
+                    </label>
+                    <label>
+                      <input class="country-filter__input" type="checkbox" name="Peru" value="Peru">
+                      <span class="custom-checkbox"></span>
+                      <span>Перу</span>
+                    </label>
+                    <label>
+                      <input class="country-filter__input" type="checkbox" name="Mexico" value="Mexico">
+                      <span class="custom-checkbox"></span>
+                      <span>Мексика</span>
+                    </label>
+                  </div>  
                 </fieldset>
                 <div class="catalog__filter-buttons">
                   <button class="button button--accent" type="submit">Применить</button>
@@ -272,9 +274,9 @@
                 </div>
               </form>
               <div class="catalog__cards cards">
-                <div class="cards__sort">
-                  <p class="cards__sort-label">Сортировка</p>
-                  <select name="products">
+                <div class="cards__sort-box">
+                  <p class="catalog__filter-name">Сортировка</p>
+                  <select class="cards__sort-select" name="products">
                     <option value="all">По умолчанию</option>
                     <option value="new">Новинки</option>
                     <option value="popular">Популярные</option>
@@ -404,39 +406,41 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
-          <div class="footer__wrapper-logo logo">
-            <picture class="logo__img">
-              <source media="(min-width: 768px)" srcset="images/logo-desktop.svg" width="60" height="50" type="image/svg+xml">
-              <img class="logo__image" src="images/logo-tablet.svg" width="82" height="36" alt="Логотип Drink2Go">
-            </picture>
-            <span class="logo__label">Интернет-магазин кофейных напитков</span>
+          <div class="footer__wrapper-box">
+            <div class="footer__wrapper-logo logo">
+              <picture class="logo__img">
+                <source media="(min-width: 768px)" srcset="images/logo-desktop.svg" width="60" height="50" type="image/svg+xml">
+                <img class="logo__image" src="images/logo-tablet.svg" width="82" height="36" alt="Логотип Drink2Go">
+              </picture>
+              <span class="logo__label">Интернет-магазин кофейных напитков</span>
+            </div>
+            <ul class="footer__wrapper-social-list social">
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <span class="visually-hidden">Вконтакте</span>
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use href="./icons/stack.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <span class="visually-hidden">Pinterest</span>
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use href="./icons/stack.svg#pinterest"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use href="./icons/stack.svg#ok"></use>
+                    </svg>
+                  </a>
+                </li>
+            </ul>
           </div>
-          <ul class="footer__wrapper-social-list social">
-              <li class="social__item">
-                <a href="#" class="social__link">
-                  <span class="visually-hidden">Вконтакте</span>
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="./icons/stack.svg#vk"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="#" class="social__link">
-                  <span class="visually-hidden">Pinterest</span>
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="./icons/stack.svg#pinterest"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="#" class="social__link">
-                  <span class="visually-hidden">Facebook</span>
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="./icons/stack.svg#ok"></use>
-                  </svg>
-                </a>
-              </li>
-          </ul>
           <div class="footer__wrapper-navigation nav-links">
             <div class="nav-links__box">
               <p class="nav-links__box-title">Интернет-магазин</p>
@@ -477,10 +481,8 @@
           </div>
           <div class="footer__copyright copyright">
             <p class="copyright__text">Разработано в</p>
-            <a class="copyright__link" href="">HTML Academy
-              <svg class="copyright__img" width="28" height="22" aria-hidden="true">
-                <use href="./icons/stack.svg#logo-developer"></use>
-              </svg>
+            <a class="copyright__link" href="#">
+              <span>HTML Academy</span>
             </a>
           </div>
         </div>

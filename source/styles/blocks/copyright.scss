@@ -1,5 +1,36 @@
 .copyright {
-  &__img {
-    /* color: red; */
+  margin-bottom: 20px;
+
+  &__text {
+    margin: 0;
+    color: $bg-grey;
   }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: $bg-grey;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      right: -27;
+      width: 28px;
+      height: 22px;
+      background-image: url("../../icons/logo-developer.svg");
+      background-repeat: no-repeat;
+      background-size: 28px 22px;
+    }
+  }
+}
+
+.copyright__link:hover {
+  color: $accent-color;
+}
+
+.copyright__link:hover::before {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(70%) saturate(700%) hue-rotate(250deg);
 }

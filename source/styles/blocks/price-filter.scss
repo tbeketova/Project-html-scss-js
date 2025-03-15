@@ -2,141 +2,133 @@
   display: flex;
   flex-direction: column;
   position: relative;
-}
 
-/* Фильтр диапазон цен */
-.range-price {
-  margin-right: 70px;
-}
+  /* Шкала ценового диапазона */
+  &__scale {
+    position: relative;
+    width: 280px;
+    height: 2px;
+    background-color: $bg-grey;
+    margin-bottom: 30px;
 
-.range-price-inputs {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+    @media (min-width: $tablet-width) {
+      width: 230px;
+    }
 
-  &::before {
-    content: "";
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
+  }
+
+  &__bar {
     position: absolute;
-    width: 8;
-    height: 2;
-    top: 50%;
-    left: 50%;
-    background-color: $btn-disabled;
-  }
-}
+    width: 240px;
+    height: 2px;
+    background-color: $accent-color;
 
-/* Скрыть стрелки вверх и вниз на элементе input type=number */
-.range-price-field[type="number"]::-webkit-inner-spin-button,
-.range-price-field[type="number"]::-webkit-outer-spin-button,
-.modal-quantity-field[type="number"]::-webkit-inner-spin-button,
-.modal-quantity-field[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-}
+    @media (min-width: $tablet-width) {
+      width: 180px;
+    }
 
-.range-price-field[type="number"],
-.modal-quantity-field[type="number"] {
-  -moz-appearance: textfield;
-}
-
-/* Поля ввода цены */
-.range-price-field {
-  width: 118px;
-  font-family: $primary-font;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  color: $btn-disabled;
-  background-color: $white-color;
-  padding: 9px 25px;
-  border: 2px solid $accent-color;
-  margin: 0;
-  border-radius: 4px;
-  text-align: center;
-
-  @media (min-width: $tablet-width) {
-    width: 90px;
-    padding: 9px 15px;
+    @media (min-width: $desktop-width) {
+      width: 257px;
+    }
   }
 
-  @media (min-width: $desktop-width) {
+  &__toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 2px solid $accent-color;
+    background-color: $white-color;
+    cursor: grab;
+
+    &:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      background-color: $accent-color;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $accent-color;
+    }
+  }
+
+  &__toggle--min {
+    top: -8px;
+    left: 0;
+  }
+
+  &__toggle--max {
+    top: -8px;
+    right: -18px;
+
+    @media (min-width: $tablet-width) {
+      right: -15px;
+    }
+  }
+
+  /* Поля ввода цены */
+  &__fields {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8;
+      height: 2;
+      top: 50%;
+      left: 50%;
+      background-color: $btn-disabled;
+    }
+
+    label {
+      position: relative;
+
+      &:nth-of-type(2) .range-price-field {
+        font-weight: 600;
+        color: $text-color;
+      }
+    }
+  }
+
+  & input {
     width: 118px;
-    padding: 9px 15px;
-  }
-}
+    font-family: $primary-font;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $btn-disabled;
+    background-color: $white-color;
+    padding: 9px 25px;
+    border: 2px solid $accent-color;
+    margin: 0;
+    border-radius: 4px;
+    text-align: center;
 
-.range-price-label {
-  position: relative;
+    @media (min-width: $tablet-width) {
+      width: 90px;
+      padding: 9px 15px;
+    }
 
-  &:nth-of-type(2) .range-price-field {
-    font-weight: 600;
-    color: $text-color;
-  }
-}
-
-/* Шкала ценового диапазона */
-.range-price-scale {
-  position: relative;
-  width: 280px;
-  height: 2px;
-  background-color: $bg-grey;
-  margin-bottom: 30px;
-
-  @media (min-width: $tablet-width) {
-    width: 230px;
+    @media (min-width: $desktop-width) {
+      width: 118px;
+      padding: 9px 15px;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    width: 100%;
-  }
-}
-
-.range-price-bar {
-  position: absolute;
-  width: 240px;
-  height: 2px;
-  background-color: $accent-color;
-
-  @media (min-width: $tablet-width) {
-    width: 180px;
+  /* Скрыть стрелки вверх и вниз на элементе input type=number */
+  & input[type="number"]::-webkit-inner-spin-button,
+  & input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 257px;
-  }
-}
-
-.range-button-toggle {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-  border: 2px solid $accent-color;
-  background-color: $white-color;
-  cursor: grab;
-}
-
-.range-button-toggle:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  background-color: $accent-color;
-}
-
-.range-button-toggle:focus,
-.range-button-toggle:active {
-  background-color: $accent-color;
-}
-
-.button-toggle-min {
-  top: -8px;
-  left: 0;
-}
-
-.button-toggle-max {
-  top: -8px;
-  right: -18px;
-
-  @media (min-width: $tablet-width) {
-    right: -15px;
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 }

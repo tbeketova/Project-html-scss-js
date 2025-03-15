@@ -21,6 +21,21 @@
       opacity: 0.5;
     }
   }
+
+  input[type="radio"]:checked + .control-point::after {
+    position: absolute;
+    content: " ";
+    width: 12px;
+    height: 12px;
+    top: 49%;
+    transform: translateY(-50%);
+    left: 2px;
+    border-radius: 50px;
+    background-color: $accent-color;
+    z-index: 5;
+    pointer-events: none;
+    transition: background-color 0.3s ease-in-out;
+  }
 }
 
 .control-point {
@@ -36,19 +51,4 @@
   background-color: $white-color;
   pointer-events: none;
   z-index: 1;
-}
-
-.control-input[type="radio"]:checked + .control-point::after {
-  position: absolute;
-  content: " ";
-  width: 12px;
-  height: 12px;
-  top: 49%;
-  transform: translateY(-50%);
-  left: 2px;
-  border-radius: 50px;
-  background-color: $accent-color;
-  z-index: 5;
-  pointer-events: none;
-  transition: background-color 0.3s ease-in-out;
 }

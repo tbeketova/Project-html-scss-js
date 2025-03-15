@@ -1,21 +1,59 @@
 .cards {
-  &__sort {
+  &__sort-box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
 
     @media (min-width: $tablet-width) {
       justify-content: end;
       gap: 30px;
       margin-bottom: 20px;
     }
+
+    /* &::after {
+      position: absolute;
+      content: "▼";
+      font-size: 14px;
+      color: $accent-color;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+      pointer-events: none;
+    } */
   }
 
-  &__sort-label {
+  & .catalog__filter-name {
+    margin-bottom: 0;
+  }
+
+  &__sort-select {
+    width: 150px;
+    font-family: $primary-font;
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    margin: 0;
+    color: $accent-color;
+    border: none;
+    text-transform: lowercase;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    /* appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; */
   }
+
+  &__sort-select:hover {
+    background-color: $bg-light-color;
+    border: none;
+  }
+
+  /* поворот стрелки
+  .cards__sort-box:focus-within::after { 
+    transform: translateY(-50%) rotate(180deg);
+  } */
 
   &__list {
     list-style-type: none;
