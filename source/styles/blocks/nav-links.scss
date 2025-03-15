@@ -1,6 +1,7 @@
 .nav-links {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 30px;
 
@@ -16,6 +17,10 @@
   &__box {
     @media (min-width: $tablet-width) {
       width: 33%;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 30%;
     }
 
     &-title {

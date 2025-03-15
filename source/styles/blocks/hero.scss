@@ -13,6 +13,20 @@
     }
   }
 
+  &--lavender {
+    background-color: $bg-slider-lavender;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(to bottom, $bg-slider-lavender 0%, $bg-slider-lavender 75%, $white-color 71%);
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 714px;
+      background: none;
+      background-color: $bg-slider-lavender;
+    }
+  }
+
   &--espresso {
     background-color: $bg-slider-espresso;
 
