@@ -10,7 +10,12 @@
     @media (min-width: $desktop-width) {
       width: 170px;
       height: 36px;
+      margin-bottom: 15px;
     }
+  }
+
+  &:hover {
+    opacity: 0.5;
   }
 
   &__label {

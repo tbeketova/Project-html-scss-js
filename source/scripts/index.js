@@ -1,17 +1,17 @@
-import noUiSlider from "nouislider";
+/* import noUiSlider from "nouislider"; */
 
 //Burger-menu
 const navList = document.querySelector('.navigation');
 const toggle = document.querySelector('.toggle');
 
 toggle.addEventListener('click', () => {
-  navList.classList.toggle('navigation--closed');
-  navList.classList.toggle('navigation--opened');
+    navList.classList.toggle('navigation--closed');
+    navList.classList.toggle('navigation--opened');
 });
 
 //Range-filter
-document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.getElementById("slider");
+/* document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.getElementById("slider");
 
   if (!slider) {
       console.error("Ошибка: не найден #price-slider");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   noUiSlider.create(slider, {
-      start: [0, 900], // Начальные значения
+      start: [0, 900],
       connect: true,
       step: 10,
       range: {
@@ -45,4 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   console.log("Слайдер успешно создан!");
-});
+}); */

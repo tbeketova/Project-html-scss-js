@@ -1,0 +1,30 @@
+.social {
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      background-color: $bg-light-color;
+    }
+
+    &:active {
+      background-color: $accent-color;
+    }
+
+    &:hover svg path {
+      fill: $btn-active;
+    }
+  }
+}

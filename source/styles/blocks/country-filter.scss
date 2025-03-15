@@ -19,6 +19,14 @@
     font-size: 16px;
     font-weight: 500;
     position: relative;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:last-child {
+      opacity: 0.5;
+    }
   }
 
   input[type="checkbox"] {
@@ -26,7 +34,7 @@
   }
 
   input[type="checkbox"]:checked + .custom-checkbox {
-    background-color: #7d57c1; /* Фиолетовый цвет активного чекбокса */
+    background-color: $accent-color; /* Фиолетовый цвет активного чекбокса */
   }
 
   input[type="checkbox"]:checked + .custom-checkbox::before {
@@ -35,12 +43,12 @@
 
   /* Стили для отключенных чекбоксов */
   input[type="checkbox"]:disabled + .custom-checkbox {
-    background-color: #eee;
+    background-color: $bg-slider-white;
     cursor: not-allowed;
   }
 
   input[type="checkbox"]:disabled + .custom-checkbox::before {
-    background-color: #ddd;
+    background-color: $bg-slider-white;
   }
 
   input[type="checkbox"]:disabled ~ .checkbox-label {

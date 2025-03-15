@@ -16,7 +16,7 @@
     }
   }
 
-  &__list-link {
+  &__link {
     display: block;
     text-decoration: none;
     font-size: 12px;
@@ -34,16 +34,16 @@
     }
   }
 
-  &__list-link:hover,
-  &__list-link:focus {
+  &__link:hover,
+  &__link:focus {
     color: $accent-color;
   }
 
-  &__list-link:active {
+  &__link:active {
     background-color: $bg-light-color;
   }
 
-  &__list-link--current {
+  &__link--current {
     @media (min-width: $tablet-width) {
       border-bottom: 2px solid $accent-color;
     }
@@ -61,9 +61,6 @@
 }
 
 .navigation--closed .navigation__toggle {
-  position: absolute;
-  top: 18px;
-  right: 20px;
   width: 16px;
   height: 12px;
   background-image: url("./../../icons/burger-menu.svg");
@@ -73,6 +70,7 @@
   border: none;
   background-color: $white-color;
   padding: 15px 20px;
+  order: 5;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -88,9 +86,6 @@
 }
 
 .navigation--opened .navigation__toggle {
-  position: absolute;
-  top: 18px;
-  right: 20px;
   width: 16px;
   height: 12px;
   background-image: url("./../../icons/cross.svg");
@@ -100,6 +95,7 @@
   border: none;
   background-color: $white-color;
   padding: 15px 20px;
+  order: 5;
 
   @media (min-width: $tablet-width) {
     display: none;

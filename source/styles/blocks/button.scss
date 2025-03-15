@@ -12,9 +12,36 @@
 .button--accent {
   color: $white-color;
   background-color: $accent-color;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover;
+  }
+
+  &:active {
+    background-color: $btn-active;
+  }
+
+  &:disabled {
+    background-color: $btn-disabled;
+  }
 }
 
 .button--light {
   color: $accent-color;
   background-color: $white-color;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover;
+    color: $white-color;
+  }
+
+  &:active {
+    background-color: $btn-active;
+  }
+
+  &:disabled {
+    background-color: $btn-disabled;
+  }
 }

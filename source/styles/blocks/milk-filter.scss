@@ -20,6 +20,10 @@
     &:hover {
       opacity: 0.5;
     }
+
+    &:last-child {
+      opacity: 0.5;
+    }
   }
 
   input[type="radio"]:checked + .control-point::after {

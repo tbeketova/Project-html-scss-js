@@ -18,11 +18,10 @@
     }
   }
 
-  &__wrapper-link {
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 20px;
     text-decoration: none;
 
     @media (min-width: $tablet-width) {
@@ -30,7 +29,7 @@
     }
   }
 
-  &__wrapper-logo {
+  &__logo {
     width: 32px;
     height: 36px;
 
@@ -47,7 +46,7 @@
     }
   }
 
-  &__wrapper-nav {
+  &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;

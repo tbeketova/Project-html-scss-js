@@ -5,7 +5,7 @@
     padding-top: 30px;
 
     @media (min-width: $desktop-width) {
-      grid-template-columns: 320px 1fr;
+      grid-template-columns: 400px 1fr;
       gap: 40px;
       padding-top: 50px;
     }
@@ -43,25 +43,35 @@
     }
 
     @media (min-width: $desktop-width) {
+      width: 100%;
       flex-direction: column;
       align-items: flex-start;
     }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  & .logo__label {
+    width: 100%;
+  }
+
+  & .logo a {
+    text-decoration: none;
   }
 
   &__wrapper-social-list {
-    /* width: 150px; */
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* grid-column: 2 / 3; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 
     @media (min-width: $desktop-width) {
-      /* justify-content: start; */
-      gap: 40px;
+      gap: 20px;
     }
   }
 
