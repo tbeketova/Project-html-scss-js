@@ -1,6 +1,13 @@
 .cards {
   &__sort {
     display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+      justify-content: end;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
   }
 
   &__sort-label {
@@ -16,6 +23,7 @@
     padding: 0;
     display: grid;
     gap: 20px;
+    text-align: center;
 
     @media (min-width: $tablet-width) {
       display: grid;
@@ -36,7 +44,7 @@
     border-radius: 4px;
 
     @media (min-width: $tablet-width) {
-      width: 337px;
+      width: 347px;
       padding: 50px 0 30px;
     }
 
@@ -70,6 +78,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @media (min-width: $tablet-width) {
       width: 289px;

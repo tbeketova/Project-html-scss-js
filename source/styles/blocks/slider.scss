@@ -10,7 +10,14 @@
     border: none;
     cursor: pointer;
     background: transparent;
+    z-index: 10;
     transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      /* top: 50%;
+      transform: translateY(-50%); */
+    }
 
     @media (min-width: $desktop-width) {
       /* top: 50%;
@@ -19,13 +26,11 @@
   }
 
   &__button-back {
-    width: 30px;
     top: 0;
     left: 0;
-    position: absolute;
 
     &:hover {
-      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.5) 50%, rgba(120, 89, 207, 0) 100%);
+      background: linear-gradient(90deg, $bg-light-color 0%, $white-color 50%, rgba(120, 89, 207, 0) 100%);
     }
   }
 
@@ -36,7 +41,7 @@
     height: 20px;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     mask-image: url("../../icons/arrow-back.svg");
     mask-size: 11px 20px;
     mask-repeat: no-repeat;
@@ -54,13 +59,11 @@
   }
 
   &__button-next {
-    width: 30px;
     top: 0;
     right: 0;
-    position: absolute;
 
     &:hover {
-      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.5) 50%, rgba(120, 89, 207, 0) 100%);
+      background: linear-gradient(270deg, $bg-light-color 0%, $white-color 50%, rgba(120, 89, 207, 0) 100%);
     }
   }
 
@@ -71,8 +74,8 @@
     height: 20px;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%);
-    mask-image: url("../../icons/arrow-next.svg");
+    transform: translateX(-50%) rotate(180deg);
+    mask-image: url("../../icons/arrow-back.svg");
     mask-size: 11px 20px;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -91,7 +94,7 @@
   &__list {
     list-style-type: none;
     margin: 0 auto;
-    padding: 0 0 50px;
+    padding: 0 20px 50px 20px;
     min-width: 280px;
 
     @media (min-width: $tablet-width) {
@@ -117,7 +120,7 @@
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
-      justify-content: start;
+      justify-content: center;
       gap: 30px;
     }
   }

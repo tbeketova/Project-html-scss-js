@@ -11,7 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css">
     <script src="scripts/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
+    <!-- <script src="scripts/range-slider.js"></script> -->
   </head>
   <body class="page__body">
     <header class="header">
@@ -68,8 +71,7 @@
       </div>
     </header>
     <main class="page__main">
-      <section class="hero hero--espresso">
-        <div class="container">
+      <section class="hero hero--white">
         <h2 class="visually-hidden">Кофе</h2>
         <div class="hero__wrapper slider">
           <button class="slider__button-back" type="button">
@@ -148,7 +150,6 @@
             </button>
           </div>
         </div>
-        </div>
       </section>
       <section class="features">
         <div class="container">
@@ -179,45 +180,67 @@
       <section class="catalog">
         <div class="container">
           <div class="catalog__wrapper">
-            <h2 class="catalog__wrapper-title">Каталог кофейных напитков</h2>
-            <p class="catalog__wrapper-label label">Каталог</p>
-            <div class="catalog__wrapper-products">
-              <form class="catalog__wrapper-filter product" action="" method="get">
-                <fieldset class="product__filter">
-                  <legend class="product__filter-description">Цена</legend>
-                  <div class="product__filter-wrapper price-filter">
-                    <input class="price-filter__input" type="range" min="0" max="100" value="0">
-                    <label class="price-filter__box-price">
-                      <input class="price-filter__field field" type="number" name="min-price" value="0" required>
-                    </label>
-                    <label class="price-filter__box-price-label">
-                      <input class="price-filter__field field" type="number" name="max-price" value="900" required>
-                    </label>
+            <h2 class="catalog__title">Каталог кофейных напитков</h2>
+            <p class="catalog__subtitle label">Каталог</p>
+            <div class="catalog__products">
+              <form class="catalog__form" action="" method="get">
+                <fieldset class="catalog__filter-group">
+                  <legend class="catalog__filter-name">Цена</legend>
+                  <div class="catalog__filter-box price-filter">
+                    <div class="range-price-scale">
+                      <div class="range-price-bar">
+                        <button type="button" class="range-button-toggle button-toggle-min">
+                          <span class="visually-hidden">Изменить минимальную цену</span>
+                        </button>
+                        <button type="button" class="range-button-toggle button-toggle-max">
+                          <span class="visually-hidden">Изменить максимальную цену</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="range-price-inputs">
+                          <label class="range-price-label">
+                            <input class="range-price-field" type="number" name="min-price" placeholder="0" value="0" required>
+                          </label>
+                          <label class="range-price-label">
+                            <input class="range-price-field" type="number" name="max-price" placeholder="900" value="900" required>
+                          </label>
+                    </div>
                   </div>
                 </fieldset>
-                <fieldset class="product__filter">
-                  <legend class="product__filter-description">Наличие молока</legend>
-                  <div class="product__filter-wrapper milk-filter">
-                    <label class="milk-filter__label">
-                      <input type="radio" class="milk-filter__input" name="milk" value="any">
-                      <span>Неважно</span>
-                    </label>
-                    <label class="milk-filter__label" for="milk-animal">
-                      <input type="radio" class="milk-filter__input" id="milk-animal" name="milk" value="animal" >
-                      <span>Только животное</span>
-                    </label>
-                    <label class="milk-filter__label" for="milk-plant">
-                      <input type="radio" class="milk-filter__input" id="milk-plant" name="milk" value="plant">
-                      <span>Только растительное</span>
-                    </label>
-                    <label class="milk-filter__label" for="milk-without">
-                      <input type="radio" class="milk-filter__input" id="milk-without" name="milk" value="without">
-                      <span>Без молока</span>
-                    </label>
+
+                <fieldset class="catalog__filter-group filter-radio">
+                  <legend class="catalog__filter-name">Наличие молока</legend>
+                  <div class="catalog__filter-box milk-filter">
+                    <div class="catalog__filter-box milk-filter">
+                      <label class="catalog-filter-label">
+                        <input class="control-input visually-hidden" type="radio" id="milk-all" name="milk" value="any" checked>
+                        <span class="control-point"></span>
+                        <span>Неважно</span>
+                      </label>
+                    </div>
+                    <div class="catalog__filter-box milk-filter">
+                      <label class="catalog-filter-label">
+                        <input class="control-input visually-hidden" type="radio" id="milk-animal" name="milk" value="animal">
+                        <span class="control-point"></span>
+                        <span>Только животное</span>
+                      </label>
+                    </div>
+                    <div class="catalog__filter-box milk-filter">
+                      <label class="catalog-filter-label">
+                        <input class="control-input visually-hidden" type="radio" id="milk-plant" name="milk" value="plant">
+                        <span class="control-point"></span>
+                        <span>Только растительное</span>
+                      </label>
+                      <label >
+                        <input class="control-input visually-hidden" type="radio" id="milk-without" name="milk" value="without">
+                        <span class="control-point"></span>
+                        <span>Без молока</span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
-                <fieldset class="product__filter country-filter">
-                  <legend class="product__filter-description">Страна произрастания</legend>
+                <fieldset class="catalog__filter-group country-filter">
+                  <legend class="catalog__filter-name">Страна произрастания</legend>
                   <label class="country-filter__label">
                     <input class="country-filter__input" type="checkbox" name="Brazil" value="Brazil">
                     <span>Бразилия</span>
@@ -243,12 +266,12 @@
                     <span>Мексика</span>
                   </label>
                 </fieldset>
-                <div class="product__form-buttons">
-                  <button class="product__form-button button button--accent" type="submit">Применить</button>
-                  <button class="product__form-button button button--light" type="reset">Сбросить</button>
+                <div class="catalog__filter-buttons">
+                  <button class="button button--accent" type="submit">Применить</button>
+                  <button class="button button--light" type="reset">Сбросить</button>
                 </div>
               </form>
-              <div class="catalog__wrapper-cards cards">
+              <div class="catalog__cards cards">
                 <div class="cards__sort">
                   <p class="cards__sort-label">Сортировка</p>
                   <select name="products">

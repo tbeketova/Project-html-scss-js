@@ -1,5 +1,17 @@
 .hero {
-  background-color: $bg-slider-white;
+  &--white {
+    background-color: $bg-slider-white;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(to bottom, $bg-slider-white 0%, $bg-slider-white 75%, $white-color 71%);
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 714px;
+      background: none;
+      background-color: $bg-slider-white;
+    }
+  }
 
   &--espresso {
     background-color: $bg-slider-espresso;
@@ -16,6 +28,11 @@
   }
 
   &__wrapper {
+    margin: 0 auto;
     position: relative;
+
+    @media (min-width: $desktop-width) {
+      max-width: 1550px;
+    }
   }
 }
