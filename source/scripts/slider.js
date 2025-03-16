@@ -26,13 +26,17 @@ sliderPaginationButtons.forEach((button, index) => {
 });
 
 buttonBack.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide();
+  if (currentIndex > 0) {
+    currentIndex--;
+    showSlide();
+  }
 });
 
 buttonNext.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide();
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
+    showSlide();
+  }
 });
 
 showSlide();
